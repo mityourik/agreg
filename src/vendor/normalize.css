@@ -193,12 +193,14 @@ select {
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
-
 button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-    -webkit-appearance: button;
+    /* Define the standard property 'appearance' for compatibility */
+    appearance: button;
+    -webkit-appearance: button; /* Chrome, Safari */
+    -moz-appearance: button; /* Firefox */
 }
 
 /**
@@ -289,9 +291,11 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 
+/* Additional elements that commonly use appearance property */
 [type='search'] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
+    appearance: textfield; /* Standard */
+    -webkit-appearance: textfield; /* Chrome, Safari */
+    -moz-appearance: textfield; /* Firefox */
 }
 
 /**
