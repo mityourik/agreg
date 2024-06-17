@@ -1,0 +1,28 @@
+@import '../../../styles/variables.scss';
+
+.search {
+    display: flex;
+    align-items: center;
+
+    &__search-input {
+        padding: 5px;
+        height: 25px;
+        border: none;
+        outline: none;
+    }
+
+    &__search-button {
+        border: none;
+        margin: 0;
+        padding: 0;
+        background-image: url('../../../vendor/icons/search-icon.svg');
+        background-size: 13px 13px;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        background-color: $light-gray;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}

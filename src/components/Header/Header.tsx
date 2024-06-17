@@ -1,12 +1,23 @@
 import styles from './Header.module.scss';
+import Search from './Search/Search';
 
 const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.header__contact_info}>
-        <a href="mailto:info@1eeg.ru" className={styles['header__contact-link']}>info@1eeg.ru</a>
-        <a href="tel:+79774813028" className={styles['header__contact-link']}>+7 (977) 481-30-28</a>
-      </div>
+        <div className={styles['header__contact-info']}>
+            <div className={styles['header__contact-info__mail-and-phone__container']}>
+                <a href="mailto:info@1eeg.ru" className={styles['header__contact-link_mail']}>info@1eeg.ru</a>
+                <a href="tel:+79774813028" className={styles['header__contact-link_phone']}>+7 (977) 481-30-28</a>
+            </div>
+            <div className={styles['header__contact-info__social-and-search__container']}>
+                <div className={styles['header__social-media']}>
+                    <a href="https://vk.com" className={styles['header__social-link_vk']}/>
+                    <a href="https://youtube.com" className={styles['header__social-link_youtube']}/>
+                </div>
+                <Search />
+            </div>
+
+        </div>
       <div className={styles['header__logo']}>
         <img src="logo.png" alt="Первая школа ЭЭГ-техников" className={styles['header__logo-image']} />
         <span className={styles['header__logo-text']}>Первая школа ЭЭГ-техников</span>
@@ -21,14 +32,6 @@ const Header: React.FC = () => {
           <li className={styles['header__nav-item']}><a href="#contacts" className={styles['header__nav-link']}>Контакты</a></li>
         </ul>
       </nav>
-      <div className={styles['header__social-media']}>
-        <a href="https://vk.com" className={styles['header__social-link']}><img src="vk-icon.png" alt="VK" /></a>
-        <a href="https://youtube.com" className={styles['header__social-link']}><img src="youtube-icon.png" alt="YouTube" /></a>
-      </div>
-      <div className={styles['header__search']}>
-        <input type="text" placeholder="Поиск" className={styles['header__search-input']} />
-        <button type="submit" className={styles['header__search-button']}>🔍</button>
-      </div>
     </header>
   );
 };
