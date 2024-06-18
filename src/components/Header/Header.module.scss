@@ -26,7 +26,7 @@
 
     &__contact-link_mail {
         margin: 0 10px;
-        color: $green;
+        color: teal;
         text-decoration: underline;
         display: flex;
         align-items: center;
@@ -46,7 +46,7 @@
 
     &__contact-link_phone {
         margin: 0 10px;
-        color: $green;
+        color: teal;
         text-decoration: underline;
         display: flex;
         align-items: center;
@@ -83,26 +83,69 @@
     }
 
     &__logo-image {
-        height: 50px;
+        height: 100px;
         margin-right: 10px;
+    }
+
+    &__logo-text {
+        font-size: 20px;
+        font-weight: bold;
     }
 
     &__nav {
         margin: 20px 0;
+        display: flex;
     }
 
     &__nav-list {
         list-style: none;
         display: flex;
+        align-items: center;
         gap: 20px;
     }
 
-    &__nav-item {}
+    &__nav-item {
+        position: relative;
+        &:hover .dropdown {
+            display: block;
+        }
+    }
 
     &__nav-link {
         text-decoration: none;
         color: teal;
         font-weight: bold;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav-arrow {
+        margin-left: 5px;
+        font-size: 12px;
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        min-width: 150px;
+
+        &-link {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: black;
+            &:hover {
+                background-color: #f1f1f1;
+            }
+        }
     }
 
     &__social-link {

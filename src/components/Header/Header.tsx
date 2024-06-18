@@ -1,5 +1,6 @@
 import styles from './Header.module.scss';
 import Search from './Search/Search';
+import mainLogo from '../../vendor/icons/main-logo-biola.svg';
 
 const Header: React.FC = () => {
   return (
@@ -19,16 +20,33 @@ const Header: React.FC = () => {
         </div>
         <div className={styles['header__logo-and-nav']}>
             <div className={styles['header__logo']}>
-                <img src="logo.png" alt="Первая школа ЭЭГ-техников" className={styles['header__logo-image']} />
+                <img className={styles['header__logo-image']} alt="Первая школа ЭЭГ-техников" src={mainLogo} />
+                <span className={styles['header__logo-text']}>НПФ &laquo;Биола&raquo;</span>
             </div>
             <nav className={styles['header__nav']}>
                 <ul className={styles['header__nav-list']}>
-                <li className={styles['header__nav-item']}><a href="#about" className={styles['header__nav-link']}>О школе</a></li>
-                <li className={styles['header__nav-item']}><a href="#training" className={styles['header__nav-link']}>Обучение</a></li>
-                <li className={styles['header__nav-item']}><a href="#information" className={styles['header__nav-link']}>Информации</a></li>
-                <li className={styles['header__nav-item']}><a href="#conference" className={styles['header__nav-link']}>Конференция</a></li>
-                <li className={styles['header__nav-item']}><a href="#clinical-work" className={styles['header__nav-link']}>Клиническая работа</a></li>
-                <li className={styles['header__nav-item']}><a href="#contacts" className={styles['header__nav-link']}>Контакты</a></li>
+                    <li className={styles['header__nav-item']}>
+                        <a href="#about" className={styles['header__nav-link']}>
+                            О школе <span className={styles['header__nav-arrow']}>▼</span>
+                        </a>
+                        <ul className={styles['dropdown']}>
+                            <li><a href="#about-us" className={styles['dropdown-link']}>О нас</a></li>
+                            <li><a href="#team" className={styles['dropdown-link']}>Команда</a></li>
+                        </ul>
+                    </li>
+                    <li className={styles['header__nav-item']}>
+                        <a href="#training" className={styles['header__nav-link']}>
+                            Обучение <span className={styles['header__nav-arrow']}>▼</span>
+                        </a>
+                        <ul className={styles['dropdown']}>
+                            <li><a href="#courses" className={styles['dropdown-link']}>Курсы</a></li>
+                            <li><a href="#schedule" className={styles['dropdown-link']}>Расписание</a></li>
+                        </ul>
+                    </li>
+                    <li className={styles['header__nav-item']}><a href="#information" className={styles['header__nav-link']}>Информации</a></li>
+                    <li className={styles['header__nav-item']}><a href="#conference" className={styles['header__nav-link']}>Конференция</a></li>
+                    <li className={styles['header__nav-item']}><a href="#clinical-work" className={styles['header__nav-link']}>Клиническая работа</a></li>
+                    <li className={styles['header__nav-item']}><a href="#contacts" className={styles['header__nav-link']}>Контакты</a></li>
                 </ul>
             </nav>
         </div>
