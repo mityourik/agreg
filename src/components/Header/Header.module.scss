@@ -137,20 +137,14 @@
     &__social-link {
         display: flex;
 
-        &_vk {
-            width: 18px;
-            height: 18px;
-            background-image: url('../../vendor/icons/vk-icon.svg');
-            background-size: contain;
-            background-repeat: no-repeat;
+        &_vk_icon {
+            display: flex;
+            border-radius: 4px;
         }
 
-        &_youtube {
-            width: 18px;
-            height: 18px;
-            background-image: url('../../vendor/icons/youtube-icon.svg');
-            background-size: contain;
-            background-repeat: no-repeat;
+        &_youtube_icon {
+            border-radius: 4px;
+            display: flex;
         }
     }
 }

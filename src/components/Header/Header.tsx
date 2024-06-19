@@ -3,6 +3,8 @@ import Search from './Search/Search';
 import mainLogo from '../../vendor/icons/main-logo-biola.svg';
 import { EmailIcon } from '../../assets/email';
 import { CallIcon } from '../../assets/Call';
+import { VkIcon } from '../../assets/Vk';
+import { YoutubeIcon } from '../../assets/Youtube';
 
 const Header: React.FC = () => {
   return (
@@ -20,8 +22,12 @@ const Header: React.FC = () => {
             </div>
             <div className={styles['header__contact-info__social-and-search__container']}>
                 <div className={styles['header__social-media']}>
-                    <a href="https://vk.com" className={styles['header__social-link_vk']}/>
-                    <a href="https://youtube.com" className={styles['header__social-link_youtube']}/>
+                    <a href="https://vk.com" className={styles['header__social-link_vk']}>
+                        <VkIcon className={styles['header__social-link_vk_icon']} />
+                    </a>
+                    <a href="https://youtube.com" className={styles['header__social-link_youtube']}>
+                        <YoutubeIcon className={styles['header__social-link_youtube_icon']} />
+                    </a>
                 </div>
                 <Search />
             </div>
