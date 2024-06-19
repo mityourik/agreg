@@ -26,42 +26,28 @@
 
     &__contact-link_mail {
         margin: 0 10px;
-        color: teal;
+        color: $main-color;
         text-decoration: underline;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        &::before {
-            content: '';
-            display: inline-block;
-            margin-right: 5px;
-            width: 18px;
-            height: 18px;
-            background-image: url('../../vendor/icons/mail-icon.svg');
-            background-size: contain;
-            background-repeat: no-repeat;
+        &_icon {
+            margin-right: 10px;
         }
     }
 
     &__contact-link_phone {
         margin: 0 10px;
-        color: teal;
+        color: $main-color;
         text-decoration: underline;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: bold;
 
-        &::before {
-            content: '';
-            display: inline-block;
-            margin-right: 5px;
-            width: 18px;
-            height: 18px;
-            background-image: url('../../vendor/icons/phone-icon.svg');
-            background-size: contain;
-            background-repeat: no-repeat;
+        &_icon {
+            margin-right: 10px;
         }
     }
 

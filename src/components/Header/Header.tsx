@@ -1,14 +1,22 @@
 import styles from './Header.module.scss';
 import Search from './Search/Search';
 import mainLogo from '../../vendor/icons/main-logo-biola.svg';
+import { EmailIcon } from '../../assets/email';
+import { CallIcon } from '../../assets/Call';
 
 const Header: React.FC = () => {
   return (
     <header className={styles.header}>
         <div className={styles['header__contact-info']}>
             <div className={styles['header__contact-info__mail-and-phone__container']}>
-                <a href="mailto:info@1eeg.ru" className={styles['header__contact-link_mail']}>info@1eeg.ru</a>
-                <a href="tel:+79774813028" className={styles['header__contact-link_phone']}>+7 (977) 481-30-28</a>
+                <a href="mailto:info@1eeg.ru" className={styles['header__contact-link_mail']}>
+                    <EmailIcon className={styles['header__contact-link_mail_icon']} />
+                    info@1eeg.ru
+                </a>
+                <a href="tel:+79774813028" className={styles['header__contact-link_phone']}>
+                    <CallIcon className={styles['header__contact-link_phone_icon']} />
+                    +7 (977) 481-30-28
+                </a>
             </div>
             <div className={styles['header__contact-info__social-and-search__container']}>
                 <div className={styles['header__social-media']}>
