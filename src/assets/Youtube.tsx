@@ -4,7 +4,7 @@ interface IYoutubeProps extends React.SVGProps<SVGSVGElement> {}
 
 export const YoutubeIcon: React.FC<IYoutubeProps> = ({ ...props }) => {
     return (
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" {...props}>
             <rect width="24" height="24" transform="translate(0.710022)" fill="white" />
             <g clipPath="url(#clip0_1_144)">
                 <g clipPath="url(#clip1_1_144)">
