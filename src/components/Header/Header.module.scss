@@ -27,7 +27,6 @@
     &__contact-link_mail {
         margin: 0 10px;
         color: $main-color;
-        text-decoration: underline;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -40,11 +39,9 @@
     &__contact-link_phone {
         margin: 0 10px;
         color: $main-color;
-        text-decoration: underline;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: bold;
 
         &_icon {
             margin-right: 10px;
@@ -66,11 +63,13 @@
     &__logo {
         display: flex;
         align-items: center;
+        justify-content: center;
+        min-width: 100px;
     }
 
     &__logo-image {
-        height: 100px;
-        margin-right: 10px;
+        display: flex;
+        width: 150px;
     }
 
     &__logo-text {
@@ -87,7 +86,6 @@
         list-style: none;
         display: flex;
         align-items: center;
-        gap: 20px;
     }
 
     &__nav-item {
@@ -99,8 +97,7 @@
 
     &__nav-link {
         text-decoration: none;
-        color: teal;
-        font-weight: bold;
+        color: $neutral-gray-900;
         padding: 10px 15px;
         display: flex;
         align-items: center;

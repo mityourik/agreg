@@ -33,10 +33,10 @@ const Header: React.FC = () => {
             </div>
         </div>
         <div className={styles['header__logo-and-nav']}>
-            <div className={styles['header__logo']}>
+            {/* <div className={styles['header__logo']}>
                 <img className={styles['header__logo-image']} alt="Первая школа ЭЭГ-техников" src={mainLogo} />
                 <span className={styles['header__logo-text']}>НПФ &laquo;Биола&raquo;</span>
-            </div>
+            </div> */}
             <nav className={styles['header__nav']}>
                 <ul className={styles['header__nav-list']}>
                     <li className={styles['header__nav-item']}>
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
                             <li><a href="#schedule" className={styles['dropdown-link']}>Расписание</a></li>
                         </ul>
                     </li>
-                    <li className={styles['header__nav-item']}><a href="#information" className={styles['header__nav-link']}>Информации</a></li>
+                    <li className={styles['header__nav-item']}><a href="#information" className={styles['header__nav-link']}>Информация</a></li>
                     <li className={styles['header__nav-item']}><a href="#conference" className={styles['header__nav-link']}>Конференция</a></li>
                     <li className={styles['header__nav-item']}><a href="#clinical-work" className={styles['header__nav-link']}>Клиническая работа</a></li>
                     <li className={styles['header__nav-item']}><a href="#contacts" className={styles['header__nav-link']}>Контакты</a></li>
